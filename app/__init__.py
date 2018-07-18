@@ -7,7 +7,7 @@ from config import app_config
 db = SQLAlchemy()
 app = Flask(__name__, instance_relative_config=True)
 
-from app import views
+from app imphort views
 
 app.config['JWT_SECRET_KEY'] = 'supersecretishere'
 app.config['JWT_BLACKLIST_ENABLED'] = True
