@@ -4,11 +4,11 @@ from flask_login import LoginManager
 from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 
-app.config['SECRET_KEY'] = 'somerandomnumbers'
+app.config['SECRET_KEY'] = 'some-random-string-that-should-be'
 app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///site.db"
 
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
 login_manager = LoginManager(app)
 
-from blogpost import routes
+from blogpost import routes  # noqa
