@@ -1,5 +1,8 @@
 from flask import Flask, render_template
+from forms.forms import RegistrationForm, LoginForm
 app = Flask(__name__)
+
+app.config['SECRET_KEY'] = 'somerandomnumbers'
 
 
 @app.route("/")
