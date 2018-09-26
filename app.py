@@ -1,8 +1,12 @@
 from flask import Flask, render_template, flash, redirect, url_for
+from flask_sqlalchemy import SQLAlchemy
 from forms.forms import RegistrationForm, LoginForm
 app = Flask(__name__)
 
 app.config['SECRET_KEY'] = 'somerandomnumbers'
+app.config[SQLALCHEMY_DATABASE_URL] = "postgresql://postgres:boni@orwa@localhost/blogpost"
+
+db = SQLAlchemy(app)
 
 
 @app.route("/")
