@@ -4,7 +4,7 @@ from forms.forms import RegistrationForm, LoginForm
 app = Flask(__name__)
 
 app.config['SECRET_KEY'] = 'somerandomnumbers'
-app.config[SQLALCHEMY_DATABASE_URL] = "postgresql://postgres:boni@orwa@localhost/blogpost"
+app.config['SQLALCHEMY_DATABASE_URL'] = "sqlite:///site.db"
 
 db = SQLAlchemy(app)
 
