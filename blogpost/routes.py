@@ -1,5 +1,5 @@
 from flask import render_template, flash, redirect, url_for
-from flask_login import login_user, current_user
+from flask_login import login_user, current_user, logout_user
 from blogpost import app, db, bcrypt
 from blogpost.forms.forms import RegistrationForm, LoginForm
 from blogpost.models.models import User, Post
@@ -54,3 +54,9 @@ def login():
             'danger')
 
     return render_template('login.html', title='Login', form=form)
+
+
+@app.route("/logout")
+def logout():
+    logout_user()
+    return redirect(url_for('home'))
