@@ -1,9 +1,9 @@
-# Project Title
-BlogPost Application.
+# [BlogPost](https://online-blog-post.herokuapp.com)
+
 
 # Project Description
-BlogPost provides a platform that brings individuals together.
-This platform creates awareness for varius expriences and gives the users the ability to write comments about the daily experiences they have interacted with. 
+BlogPost provides a platform that allow users to share articles. 
+Use this app here: [Online BlogPost](https://online-blog-post.herokuapp.com)
 
 
 ## Getting Started
