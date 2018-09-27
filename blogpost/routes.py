@@ -4,7 +4,7 @@ from PIL import Image
 from flask import render_template, flash, redirect, url_for, request
 from flask_login import login_user, current_user, logout_user, login_required
 from blogpost import app, db, bcrypt
-from blogpost.forms.forms import RegistrationForm, LoginForm, UpdateAccountForm, PostForm
+from blogpost.forms.forms import RegistrationForm, LoginForm, UpdateAccountForm, PostForm  # noqa
 from blogpost.models.models import User, Post
 
 
@@ -53,7 +53,7 @@ def login():
             flash(
                 f'You logged in successfully for {user.username}!',
                 'success')
-            return redirect(next_page) if next_page else redirect(url_for('home'))
+            return redirect(next_page) if next_page else redirect(url_for('home'))  # noqa
         flash(
             f'Invalid login credentials',
             'danger')
@@ -71,7 +71,7 @@ def save_picture(form_picture):
     random_hex = secrets.token_hex(8)
     _, f_ext = os.path.splitext(form_picture.filename)
     picture_fn = random_hex + f_ext
-    picture_path = os.path.join(app.root_path, 'static/profile_pics', picture_fn)
+    picture_path = os.path.join(app.root_path, 'static/profile_pics', picture_fn)  # noqa
     output_size = (125, 125)
     i = Image.open(form_picture)
     i.thumbnail(output_size)
