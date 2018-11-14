@@ -26,31 +26,31 @@ class BaseTestSetUp(unittest.TestCase):
             db.create_all()
 
 
-user_data = {
-    "first_name": "username",
-    "last_name": "lastname",
-    "last_name": "lastname",
-    "units": "64kg",
-    "email": "user@gmail.com",
-    "password": "user123"}
+# user_data = {
+#     "first_name": "username",
+#     "last_name": "lastname",
+#     "last_name": "lastname",
+#     "units": "64kg",
+#     "email": "user@gmail.com",
+#     "password": "user123"}
 
 
 class TestHelper():
 
     def __init__(self):
         self.base_url = 'http://127.0.0.1:5000'
-        self.headers = {'content-type': 'application/json'}
+        self.headers = {'content-type': 'application/x-www-form-urlencoded'}
         self.app = app.test_client()
     # Create a new user
 
     def add_user(self, user_data):
         url = self.base_url + '/register'
-        result = self.app.post("/register", data=user_data)
-        print("++++++++++++++", result)
+        result = self.app.post(
+            url, data=user_data, headers=self.headers)
         return result
 
     def login_user(self, user_data):
-        url = self.base_url + '/api/login'
+        url = self.base_url + '/login'
         result = self.app.post(url, data=json.dumps(
             user_data), headers=self.headers)
         return result
