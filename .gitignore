@@ -1,3 +1,5 @@
 env
 .env
-.DS_Storegit
+.DS_Store
+.vscode
+__pycache__
