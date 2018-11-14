@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Bonifase/BlogPost.svg?branch=master)](https://travis-ci.org/Bonifase/BlogPost) [![Maintainability](https://api.codeclimate.com/v1/badges/b0ddf29765582be3e04a/maintainability)](https://codeclimate.com/github/Bonifase/BlogPost/maintainability)
+
 # [BlogPost](https://online-blog-post.herokuapp.com)
 
 
