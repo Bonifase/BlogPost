@@ -96,3 +96,24 @@ a.article-title:hover {
 .article-title {
 	color: white;
 }
+
+#latest-posts {
+	background: radial-gradient(#8860d0, #c1c8e4, #5680e9);
+	color: white;
+	text-align: center;
+	text-decoration: none;
+}
+a.post-link,
+a.post-link:visited {
+	font-size: 1em;
+	font-weight: bold;
+	text-decoration: none;
+	color: white;
+}
+
+a.post-link:hover,
+a:active {
+	font-size: 20px;
+	transition: all 500ms;
+	font-size-adjust: 20px;
+}
