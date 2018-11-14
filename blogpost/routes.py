@@ -15,6 +15,12 @@ def home():
     return render_template('home.html', posts=posts)
 
 
+@app.route("/latest_posts")
+def latest_posts():
+    posts = Post.query.order_by(Post.date_posted.desc()).limit(3).all()
+    return render_template('latest_posts.html', posts=posts)
+
+
 @app.route("/about")
 def about():
     return render_template('about.html', title='About')

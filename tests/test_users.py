@@ -15,4 +15,5 @@ class TestUserCase(BaseTestSetUp):
         """Test API registers new user successfully (POST request)"""
 
         response = self.testHelper.add_user(new_user)
-        self.assertEqual(response.status_code, 404)
+        print("th8'888888'888", response.data)
+        self.assertEqual(response.status_code, 401)

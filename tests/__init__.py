@@ -45,7 +45,8 @@ class TestHelper():
 
     def add_user(self, user_data):
         url = self.base_url + '/register'
-        result = self.app.post(url, data=user_data)
+        result = self.app.post("/register", data=user_data)
+        print("++++++++++++++", result)
         return result
 
     def login_user(self, user_data):
