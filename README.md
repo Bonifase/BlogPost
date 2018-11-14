@@ -4,7 +4,7 @@
 
 
 # Project Description
-BlogPost provides a platform that allow users to share articles. 
+Create account, login, update your profile photo and post your first article. 
 Use this app here: [Online BlogPost](https://online-blog-post.herokuapp.com)
 
 
