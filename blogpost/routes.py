@@ -63,6 +63,13 @@ def register():
     return render_template('register.html', title='Register', form=form)
 
 
+@app.route("/user/<username>", methods=['GET'])
+def user(username):
+    user = User.query.filter_by(username=username).first()
+    print("This is user", user.image_file)
+    return render_template('user.html', user=user)
+
+
 @app.route("/login", methods=['GET', 'POST'])
 def login():
     if current_user.is_authenticated:
