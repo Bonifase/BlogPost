@@ -21,7 +21,7 @@
           <a href="{{ url_for('like_action', post_id=post.id, action='like') }}"><button id="style"><i class='fas fa-thumbs-up'></i>{{ post.likes.count() }} likes</button></a>
           {% endif %}
           {% else %}
-          <button id="style"><i class='fas fa-thumbs-up'></i>{{ post.likes.count() }} likes</button>
+          <a href="{{ url_for('login') }}"><button id="style"><i class='fas fa-thumbs-up'></i>{{ post.likes.count() }} likes</button></a>
           {% endif %}
       </div>
       <h2 class="article-title">{{ post.title }}</h2>
