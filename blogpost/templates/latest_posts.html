@@ -9,6 +9,17 @@
               Author: <a class="mr-2" href="{{ url_for('user', username=post.author.username) }}"> {{ post.author.username }}</a>
               <small class="text-muted">Date Posted: {{ post.date_posted.strftime('%Y-%m-%d') }}</small>
             </div>
+            <div>
+                    {% if current_user.is_authenticated %}
+                    {% if current_user.has_liked_post(post) %}
+                    <a href="{{ url_for('like_action', post_id=post.id, action='unlike') }}"><button id="style"><i class='fas fa-thumbs-down'></i>{{ post.likes.count() }} likes</button></a>
+                    {% else %}
+                    <a href="{{ url_for('like_action', post_id=post.id, action='like') }}"><button id="style"><i class='fas fa-thumbs-up'></i>{{ post.likes.count() }} likes</button></a>
+                    {% endif %}
+                    {% else %}
+                    <button id="style"><i class='fas fa-thumbs-up'></i>{{ post.likes.count() }} likes</button>
+                    {% endif %}
+                </div>
             <h2><a class="article-title" href="{{ url_for('post', post_id=post.id) }}">{{ post.title }}</a></h2>
             <p class="article-content">{{ post.content }}</p>
           </div>
