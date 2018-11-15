@@ -13,6 +13,16 @@
           </div>
         {% endif %}
       </div>
+      <div>
+          {% if current_user.is_authenticated %}
+          {% if current_user.has_liked_post(post) %}
+          <a href="{{ url_for('like_action', post_id=post.id, action='unlike') }}">Unlike</a>
+          {% else %}
+          <a href="{{ url_for('like_action', post_id=post.id, action='like') }}">Like</a>
+          {% endif %}
+          {% endif %}
+          {{ post.likes.count() }} likes
+      </div>
       <h2 class="article-title">{{ post.title }}</h2>
       <p class="article-content">{{ post.content }}</p>
     </div>
