@@ -2,11 +2,8 @@
 
 # [BlogPost](https://online-blog-post.herokuapp.com)
 
-
-# Project Description
 Create account, login, update your profile photo and post your first article. 
 Use this app here: [Online BlogPost](https://online-blog-post.herokuapp.com)
-
 
 ## Getting Started
 
