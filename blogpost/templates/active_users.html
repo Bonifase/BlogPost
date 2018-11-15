@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block content %}
+    {% for user in users %}
+        <article class="media content-section">
+            
+                        <div class="media">
+                          <img class="rounded-circle account-img"
+                          src="static/profile_pics/{{ user.image_file | default('image_file.jpg') }}" alt={{ user.username }}>
+                          <div class="media-body">
+                            <h5 class="account-heading">{{ user.username }}</h5>
+                            <p class="text-secondary">Email: {{ user.email }}</p>
+                            <h6>Posts Published:</h6>
+                            {% for post in user.posts %}
+                            <ul>
+                                <li>
+                                    <a class="post-link" href="{{ url_for('post', post_id=post.id) }}"> {{ post.title }}</a>
+                                </li>
+                            </ul>
+                            
+                            {% endfor %}
+                          </div>
+            
+        </article>
+    {% endfor %}
+{% endblock content %}

@@ -15,10 +15,27 @@ def home():
     return render_template('home.html', posts=posts)
 
 
-@app.route("/latest_posts")
+@app.route("/latest_posts", methods=['GET'])
 def latest_posts():
     posts = Post.query.order_by(Post.date_posted.desc()).limit(3).all()
-    return render_template('latest_posts.html', posts=posts)
+    if posts:
+        return render_template('latest_posts.html', posts=posts)
+    else:
+        flash(f'No latest posts', 'info')
+        return redirect(url_for('home'))
+
+
+@app.route("/active_users", methods=['GET'])
+def active_users():
+    users = User.query.all()
+    users = [user for user in users if len(user.posts) >= 2]
+    if users:
+        return render_template('active_users.html', users=users)
+    else:
+        flash(
+            f'There are no active users',
+            'info')
+        return redirect(url_for('home'))
 
 
 @app.route("/about")
