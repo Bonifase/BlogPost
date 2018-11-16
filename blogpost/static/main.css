@@ -124,3 +124,7 @@ a:active {
 	transition: all 500ms;
 	font-size-adjust: 20px;
 }
+button#style {
+	font-size: 15px;
+	border-radius: 12px;
+}

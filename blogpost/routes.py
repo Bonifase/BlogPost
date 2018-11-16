@@ -63,6 +63,13 @@ def register():
     return render_template('register.html', title='Register', form=form)
 
 
+@app.route("/user/<username>", methods=['GET'])
+def user(username):
+    user = User.query.filter_by(username=username).first()
+    print("This is user", user.image_file)
+    return render_template('user.html', user=user)
+
+
 @app.route("/login", methods=['GET', 'POST'])
 def login():
     if current_user.is_authenticated:
@@ -146,6 +153,20 @@ def new_post():
 def post(post_id):
     post = Post.query.get_or_404(post_id)
     return render_template('post.html', title=post.title, post=post)
+
+
+@app.route('/like/<int:post_id>/<action>')
+@login_required
+def like_action(post_id, action):
+    post = Post.query.filter_by(id=post_id).first_or_404()
+    print("this is very funny", current_user)
+    if action == 'like':
+        current_user.like_post(post)
+        db.session.commit()
+    if action == 'unlike':
+        current_user.unlike_post(post)
+        db.session.commit()
+    return redirect(request.referrer)
 
 
 @app.route("/post/<int:post_id>/update", methods=['GET', 'POST'])
