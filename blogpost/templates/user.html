@@ -7,8 +7,8 @@
                 src="{{ url_for(
                     'static', filename='profile_pics/' + user.image_file) }}" alt={{ user.username }}>
                 <div class="media-body">
-                <h6 class="account-heading">{{ user.username }}</h6>
-                <h6>Posts Published:</h6>
+                <h6 class="account-heading" id="whitens" >{{ user.username }}</h6>
+                <h6 id="whitens" >Posts Published:</h6>
                 {% for post in user.posts %}
                 <ul>
                     <li>
