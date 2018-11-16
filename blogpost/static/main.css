@@ -31,7 +31,7 @@ h6 {
 }
 
 .content-section {
-	background: radial-gradient(#c1c8e4, #84ceeb, #6e90e6);
+	background: #6e90e6;
 	color: aliceblue;
 	padding: 10px 20px;
 	border: 1px solid #dddddd;
@@ -98,7 +98,7 @@ a.article-title:hover {
 }
 
 #latest-posts {
-	background: radial-gradient(#c1c8e4, #84ceeb, #6e90e6);
+	background: #6e90e6;
 	color: white;
 	text-align: center;
 	text-decoration: none;
