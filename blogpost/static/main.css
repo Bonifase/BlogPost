@@ -1,5 +1,5 @@
 body {
-	background: radial-gradient(#8860d0, #c1c8e4, #5680e9);
+	background: radial-gradient(#21035a, #c1c8e4, #5680e9);
 	color: #333333;
 	margin-top: 5rem;
 	font-family: Monotype Corsiva;
@@ -15,7 +15,7 @@ h6 {
 }
 
 .bg-steel {
-	background: linear-gradient(to right, #8860d0, #5680e9);
+	background: #5680e9;
 }
 
 .site-header .navbar-nav .nav-link {
@@ -98,7 +98,7 @@ a.article-title:hover {
 }
 
 #latest-posts {
-	background: radial-gradient(#8860d0, #c1c8e4, #5680e9);
+	background: radial-gradient(#c1c8e4, #84ceeb, #6e90e6);
 	color: white;
 	text-align: center;
 	text-decoration: none;
@@ -120,6 +120,9 @@ a:active {
 
 #custom:hover,
 a:active {
+	color: #5680e9;
+	background: white;
+	border-radius: 0.5rem;
 	font-size: 20px;
 	transition: all 500ms;
 	font-size-adjust: 20px;
