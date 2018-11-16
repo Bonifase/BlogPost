@@ -1,5 +1,5 @@
 body {
-	background: radial-gradient(#21035a, #c1c8e4, #5680e9);
+	background: radial-gradient(white, white);
 	color: #333333;
 	margin-top: 5rem;
 	font-family: Monotype Corsiva;
@@ -19,7 +19,7 @@ h6 {
 }
 
 .site-header .navbar-nav .nav-link {
-	color: #cbd5db;
+	color: white;
 }
 
 .site-header .navbar-nav .nav-link:hover {
@@ -31,20 +31,19 @@ h6 {
 }
 
 .content-section {
-	background: #5680e9;
-	color: aliceblue;
+	color:  rgb(17, 10, 10);
 	padding: 10px 20px;
 	border: 1px solid #dddddd;
 	border-radius: 3px;
 	margin-bottom: 20px;
 }
 
-.article-title {
-	color: #444444;
+a.article-title {
+	color: #181313;
 }
 
 a.article-title:hover {
-	color: whitesmoke;
+	color: #5680e9;
 	text-decoration: none;
 }
 
@@ -60,7 +59,7 @@ a.article-title:hover {
 
 .article-metadata {
 	padding-bottom: 1px;
-	color: #ffffff;
+	color: black;
 	text-decoration: none;
 	margin-bottom: 4px;
 	border-bottom: 1px solid #e3e3e3;
@@ -89,18 +88,18 @@ a.article-title:hover {
 }
 .btn-outline-info {
 	color: white;
-	background: linear-gradient(to right, #8860d0, #5680e9);
+	background: #5680e9;
 }
 .text-muted {
-	color: white !important;
+	color: rgb(17, 10, 10) !important;
 }
 .article-title {
-	color: white;
+	color:  rgb(17, 10, 10);
 }
 
 #latest-posts {
-	background: #5680e9;
-	color: white;
+	background: white;
+	color: #5680e9;
 	text-align: center;
 	text-decoration: none;
 }
@@ -109,7 +108,7 @@ a.post-link:visited {
 	font-size: 1em;
 	font-weight: bold;
 	text-decoration: none;
-	color: white;
+	color: #5680e9;
 }
 
 a.post-link:hover,
@@ -133,7 +132,7 @@ button#style {
 	border-radius: 12px;
 }
 #whitens {
-	color: white;
+	color:  rgb(17, 10, 10);
 }
 a#whitens:hover,
 a#whitens:active {
