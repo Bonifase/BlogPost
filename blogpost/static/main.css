@@ -31,7 +31,7 @@ h6 {
 }
 
 .content-section {
-	background: #6e90e6;
+	background: #5680e9;
 	color: aliceblue;
 	padding: 10px 20px;
 	border: 1px solid #dddddd;
@@ -44,7 +44,7 @@ h6 {
 }
 
 a.article-title:hover {
-	color: #428bca;
+	color: whitesmoke;
 	text-decoration: none;
 }
 
@@ -61,12 +61,13 @@ a.article-title:hover {
 .article-metadata {
 	padding-bottom: 1px;
 	color: #ffffff;
+	text-decoration: none;
 	margin-bottom: 4px;
 	border-bottom: 1px solid #e3e3e3;
 }
 
 .article-metadata a:hover {
-	color: #333;
+	color: white;
 	text-decoration: none;
 }
 
@@ -98,7 +99,7 @@ a.article-title:hover {
 }
 
 #latest-posts {
-	background: #6e90e6;
+	background: #5680e9;
 	color: white;
 	text-align: center;
 	text-decoration: none;
@@ -130,4 +131,14 @@ a:active {
 button#style {
 	font-size: 15px;
 	border-radius: 12px;
+}
+#whitens {
+	color: white;
+}
+a#whitens:hover,
+a#whitens:active {
+	color: #3131ca;
+	background: white;
+	border-radius: 3px;
+	font-size: 1rem;
 }
